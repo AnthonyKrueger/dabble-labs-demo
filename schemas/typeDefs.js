@@ -9,7 +9,8 @@ const typeDefs = gql`
     }
 
     type Query {
-        popdata: [PopData]
+        popdatas: [PopData]!
+        popdata(popId: ID!): PopData
     }
 `
 
