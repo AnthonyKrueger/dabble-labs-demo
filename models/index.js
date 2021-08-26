@@ -17,4 +17,4 @@ const popSchema = new Schema({
 
 const PopData = model('PopData', popSchema);
 
-module.exports = PopData;
+module.exports = { PopData };
