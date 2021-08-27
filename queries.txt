@@ -1,0 +1,41 @@
+query listAllData {
+  popdatas {
+    country
+    year
+    population
+    _id
+  }
+}
+
+query getById {
+  popdata(popId: "6127c488294b407724e66ad1") {
+    country
+    year
+  }
+}
+
+mutation addData($country: String!, $year: Int!, $population: Int!) {
+  addPopData(country: $country, year: $year, population: $population) {
+    _id
+    country
+    year
+    population
+  }
+ }
+
+mutation updateData($id: ID!, $population: Int!) {
+  updatePopData(id: $id, population: $population) {
+    _id
+    country
+    year
+    population
+   }
+ }
+
+ mutation deleteData($id: ID!) {
+   deletePopData(id: $id) {
+     country
+     _id
+     year
+   }
+ }
