@@ -12,6 +12,12 @@ const typeDefs = gql`
         popdatas: [PopData]!
         popdata(popId: ID!): PopData
     }
+
+    type Mutation {
+        addPopData(country: String!, year: Int!, population: Int!): PopData
+        updatePopData(id: ID!, population: Int!): PopData
+        deletePopData( id: ID!): PopData
+    }
 `
 
 module.exports = typeDefs;
